@@ -1,8 +1,9 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: AWPL Docs
+description: User Documentation for AWPL (Abstract Workflow Pipeline Language)
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: "https://spice-uibk.github.io"
+baseurl: "/awpl-docs"
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Template Repository: https://github.com/Spice-uibk/awpl-docs
