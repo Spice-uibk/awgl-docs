@@ -1,8 +1,10 @@
 ---
 layout: default
-title: If-then-else
-parent: Language Constructs
+title: SLOs
+parent: Configuration
 nav_order: 2
 ---
+
+## SLO
 
 *Content will be added soon.*
