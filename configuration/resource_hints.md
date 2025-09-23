@@ -21,5 +21,5 @@ resource_hints:
 | Name  | Type    | Required | Default  | Description                                                                    |
 |-------|---------|----------|----------|--------------------------------------------------------------------------------|
 | `type`| string  | yes      | –        | The type of resource. Allowed values are: `cpu`, `memory`, `gpu`, `storage`.   |
-| `min` | string  | yes      | –        | Minimum amount of the resource expected for the task (e.g. `2`, `200Mi`).      |
-| `max` | string  | yes      | –        | Maximum amount of the resource that the task may use (e.g. `5`, `5GB`).        |
+| `min` | string  | no       | 0        | Minimum amount of the resource expected for the task (e.g. `2`, `200Mi`).      |
+| `max` | string  | no       | infinity | Maximum amount of the resource that the task may use (e.g. `5`, `5GB`).        |
