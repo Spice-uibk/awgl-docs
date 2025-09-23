@@ -10,10 +10,10 @@ nav_order: 4
 A **map** in AWPL executes a body concurrently for each element in a list. Unlike a regular loop, which repeats sequentially, a map construct distributes iterations over independent elements, enabling parallel execution.
 
 The `items` field defines the collection to iterate over and can be:
-- A literal list (e.g., [1, 2, 3, 4, 5]).
+- A literal list (e.g., `[1, 2, 3, 4, 5]`).
 - The output of another task, provided that the output is a list.
 
-Each element from items is processed independently by the maps’s body.
+Each element from items is processed independently by the maps’s body. 
 
 ```yaml
 map:

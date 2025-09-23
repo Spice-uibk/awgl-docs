@@ -7,13 +7,13 @@ nav_order: 1
 
 ## Task
 
-A **task** in AWPL represents a unit of computation or data processing within a workflow or data pipeline. Tasks are the fundamental building blocks of AWPL and can perform a wide variety of operations, such as:
+A **task** in AWPL represents a unit of computation or data processing within an application. Tasks are the fundamental building blocks of AWPL and can perform a wide variety of operations, such as:
 
-- Reading or writing data from external sources,
-- Executing computations or transformations (like filtering, aggregating, joining), and
-- Logging or monitoring.
+- reading or writing data from external sources,
+- executing computations or transformations (like filtering, aggregating, joining), and
+- logging or monitoring.
 
-Each task is uniquely identified by its `id` and can optionally include a `description` for documentation purposes. Tasks can also define dependencies on other tasks (`depends_on`) and task-specific configurations (`task_config`), allowing AWPL to manage execution order automatically.
+Each task is uniquely identified by its `id` and can optionally include a `description` for documentation purposes. Tasks can also define task-specific configurations (`task_config`) and dependencies on other tasks (`depends_on`), allowing AWPL to manage execution order automatically.
 
 ```yaml
 task: 
