@@ -9,6 +9,8 @@ nav_order: 3
 
 This example illustrates how to use a loop in AWPL to repeatedly execute a set of tasks until a given condition is no longer met.
 
+<img src="../figures/loop.png" alt="loop" style="display: block; margin: 0 auto;" width="50%"/>
+
 - The application starts with task `t_1`.
 - The loop node (`loop_1`) is defined with a `loop_data` section:
   - `loop_identifier_1` is the loop variable. 

@@ -7,7 +7,11 @@ nav_order: 2
 
 ## Branching
 
-This example demonstrates an AWPL application that introduces conditional execution using a branch construct. After the first task 
+This example demonstrates an AWPL application that introduces conditional execution using a branch construct. 
+
+<img src="../figures/branching.png" alt="branching" style="display: block; margin: 0 auto;" width="60%"/>
+
+After the first task 
 (`t_1`) completes, the application evaluates the specified condition and routes execution into one of two possible branches 
 (`true` or `false`).
 

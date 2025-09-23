@@ -9,6 +9,8 @@ nav_order: 4
 
 This example shows how to use a map node in AWPL to apply a set of tasks in parallel to each element of a list.
 
+<img src="../figures/map.png" alt="map" style="display: block; margin: 0 auto;" width="50%"/>
+
 - The application begins with task `t_1`, which produces a list output (e.g., `[1,2,3,4]`).
 - The map node (`map_1`) takes this list as input via the `items: "t_1"` field. Each element in the list is processed independently in parallel.
 - The body of the map defines the tasks executed for each list element:

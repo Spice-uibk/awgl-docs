@@ -11,6 +11,8 @@ This example demonstrates an AWPL application that consists **exclusively of tas
 loops, or parallel constructs. It highlights how tasks can be connected through dependencies to form a directed acyclic 
 graph (DAG).
 
+<img src="../figures/task_only.png" alt="task_only" style="display: block; margin: 0 auto;" width="50%"/>
+
 Each task is uniquely identified by its `id`, may include a `description`, and declares dependencies on one or more upstream 
 tasks via `depends_on`. Since no explicit execution logic (such as kubernetes pod operator or custom task implementations) is provided, 
 the `task_config` is defined as an empty object (`{}`). In case of Apache Airflow, this translates to the use of 
