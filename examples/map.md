@@ -46,11 +46,6 @@ nodes:
               - "t_2"
       depends_on:
         - "t_1"
-    - task:
-      id: "t_4"
-      task_config: {}
-      depends_on: 
-        - "t_1"
   - task:
       id: "t_4"
       task_config: {}
