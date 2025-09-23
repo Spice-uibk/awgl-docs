@@ -4,4 +4,6 @@ title: Examples
 nav_order: 3
 ---
 
-*Content will be added soon.*
+# Examples
+
+This section provides illustrative examples of application defined in AWPL.
