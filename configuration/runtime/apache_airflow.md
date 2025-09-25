@@ -75,23 +75,25 @@ task_config:
     image_pull_policy: "Always"
     config_file: "~/.kube/config"
     hostnetwork: true | false
+    skip_on_exit_code: 000
 ```
 
 #### Arguments
 
-| Name                      | Type   | Required | Default        | Description                                                                             |
-|---------------------------|--------|----------|----------------|-----------------------------------------------------------------------------------------|
-| `kubernetes_pod_operator` | object | no       | –              | Configuration for running the task in a Kubernetes pod.                                 |
-| `do_xcom_push`            | bool   | no       | true           | Whether the task pushes XComs (inter-task messages) in Airflow.                         |
-| `name`                    | string | yes      | –              | Name of the Kubernetes pod.                                                             |
-| `namespace`               | string | no       | default        | Kubernetes namespace for the pod.                                                       |
-| `image`                   | string | yes      | –              | Docker image to use for the pod.                                                        |
-| `cmds`                    | list   | no       | []             | List of commands to execute in the pod.                                                 |
-| `arguments`               | list   | no       | []             | Arguments passed to the container entrypoint.                                           |
-| `volumes`                 | list   | no       | []             | Volumes to mount into the pod. Each volume requires a `name` and `claim_name`.          |
-| `volume_mounts`           | list   | no       | []             | Volume mounts inside the pod. Each mount requires a `name` and `mount_path`.            |
-| `env_vars`                | list   | no       | []             | Environment variables for the pod. Each entry has a `name` and `value`.                 |
-| `image_pull_policy`       | string | no       | Always         | Image pull policy for the container (e.g., `Always`, `IfNotPresent`).                   |
-| `config_file`             | string | no       | ~/.kube/config | Path to the Kubernetes config file.                                                     |
-| `hostnetwork`             | bool   | no       | false          | Whether the pod uses the host network.                                                  |
+| Name                      | Type   | Required | Default        | Description                                                                                                                                    |
+|---------------------------|--------|----------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| `kubernetes_pod_operator` | object | no       | –              | Configuration for running the task in a Kubernetes pod.                                                                                        |
+| `do_xcom_push`            | bool   | no       | true           | Whether the task pushes XComs (inter-task messages) in Airflow.                                                                                |
+| `name`                    | string | yes      | –              | Name of the Kubernetes pod.                                                                                                                    |
+| `namespace`               | string | no       | default        | Kubernetes namespace for the pod.                                                                                                              |
+| `image`                   | string | yes      | –              | Docker image to use for the pod.                                                                                                               |
+| `cmds`                    | list   | no       | []             | List of commands to execute in the pod.                                                                                                        |
+| `arguments`               | list   | no       | []             | Arguments passed to the container entrypoint.                                                                                                  |
+| `volumes`                 | list   | no       | []             | Volumes to mount into the pod. Each volume requires a `name` and `claim_name`.                                                                 |
+| `volume_mounts`           | list   | no       | []             | Volume mounts inside the pod. Each mount requires a `name` and `mount_path`.                                                                   |
+| `env_vars`                | list   | no       | []             | Environment variables for the pod. Each entry has a `name` and `value`.                                                                        |
+| `image_pull_policy`       | string | no       | Always         | Image pull policy for the container (e.g., `Always`, `IfNotPresent`).                                                                          |
+| `config_file`             | string | no       | ~/.kube/config | Path to the Kubernetes config file.                                                                                                            |
+| `hostnetwork`             | bool   | no       | false          | Whether the pod uses the host network.                                                                                                         |
+| `skip_on_exit_code`       | number | no       | None           | If the task exits with this exit code, leave the task in skipped state. If set to `None`, any non-zero exit code will be treated as a failure. |
 
